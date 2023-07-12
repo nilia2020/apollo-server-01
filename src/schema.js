@@ -7,7 +7,7 @@ const typeDefs = gql`
         users: [User!]
         # sólo para recuperar una foto por ID
         photo(_id: ID!): Photo
-        photo(categoryId: ID): Photo
+        photosbycategory(categoryId: ID!): [Photo!]
     }
     # Dentro de Photo llamo a category y user
     type Photo {
